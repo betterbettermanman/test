@@ -1,0 +1,9 @@
+springboot整合activiti时，启动抛异常
+nested exception is java.io.FileNotFoundException: class path resource [processes/] cannot be resolved to URL because it does not exist。处理方法
+（1）在resource目录下添加processes文件夹，并且文件夹不能为空
+（2）在application.properties下家配置
+
+#启动报错class path resource [processes/] cannot be resolved to URL because it does not exist
+spring.activiti.check-process-definitions=false
+-=================================================================================================================
+在使用常量时候，对于单个常量使用常量类，对于状态类似的常量使用枚举，接口是定义类型的，而不应该用于导出常量
